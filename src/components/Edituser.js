@@ -13,7 +13,7 @@ function Edituser() {
 
   function getUsersData() {
     let url = `http://localhost:8000/getuser/${params.id}`;
-    url = `http://merncrud.vercel.app/getuser/${params.id}`;
+    url = `https://merncrud.vercel.app/getuser/${params.id}`;
     try {
       axios.get(url).then((response) => {
         setName(response.data.uname);
