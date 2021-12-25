@@ -7,9 +7,11 @@ function Adduser() {
 
   //   handle form
   function handleSubmit() {
+    let url = "http://localhost:8000/adduser";
+    url = "https://merncrud.vercel.app/adduser";
     if (name && email != "") {
       axios
-        .post("http://localhost:8000/adduser", {
+        .post(url, {
           uname: name,
           uemail: email,
         })
